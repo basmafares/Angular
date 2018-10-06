@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Logo</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink='/posts'>Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="post/{{id}}">Single Post</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/post',id]">Single Post2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/post',{id:3,name:'basma'}]">Single Post3</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/post']"  [queryParams]="{id:3,status:true}">queryParams</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/about']" [queryParams]="{name:'bas'}">Abouta</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<h2>Here are some links to help you start: </h2>
+<button (click)="myRoutes()">test</button>
+<button (click)="myRoutes2()" class="btn btn-danger">test2</button>
+<button (click)="myRoutes3()" class="btn btn-primary">test3</button>
+<router-outlet></router-outlet>
+
+
